@@ -1,0 +1,12 @@
+[service]
+name = "judge0-instance"
+start = "docker-compose up"  # Adjust if using a custom start command or multiple services
+
+[env]
+PORT = "2358"  # Expose the port used by Judge0
+ENABLE_SANDBOX = "true"  # Enables sandboxing for secure code execution
+
+# Judge0-related configurations
+# Add the resources configuration for constraints
+CPU = "1"  # Adjust based on Railway's available plan, may go higher
+MEMORY = "1024"  # Minimum recommended for Judge0
